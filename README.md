@@ -13,3 +13,7 @@ Este proyecto es una aplicación web para la gestión de productos y categorías
 Esta aplicación permite realizar las siguientes operaciones:
 - **Productos**: Crear, leer, actualizar y eliminar productos.
 - **Categorías**: Crear, leer, actualizar y eliminar categorías.
+
+
+## Capturas
+![alt text](images/categories.png)

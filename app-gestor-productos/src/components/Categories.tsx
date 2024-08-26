@@ -6,7 +6,7 @@ import { Toast } from "primereact/toast";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import { InputText } from 'primereact/inputtext';
-
+import '../index.css';
 
 axios.defaults.baseURL = 'http://localhost:3001';
 
@@ -85,12 +85,12 @@ export const Categories:React.FC = () => {
     };
 
     return(
-        <div>
+        <div className="container">
             <Toast ref={toast} />
             <h1>Gestión de Categorías</h1>
 
             <Button label="Agregar" icon="pi pi-plus" onClick={openNew} />
-            <DataTable value={categories} tableStyle={{ minWidth: '50rem' }}>
+            <DataTable value={categories} tableStyle={{ minWidth: '50rem' }} className="table">
                 <Column field="category_id" header="ID"></Column>
                 <Column field="name" header="Nombre Categoría"></Column>
                 <Column field="description" header="Descripción"></Column>

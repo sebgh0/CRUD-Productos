@@ -1,8 +1,12 @@
 import React from "react";
+import '../index.css';
 
 export const Inicio: React.FC = () => {
     return(
-        <h1>Welcome</h1>
+        <div className="container">
+            <h1>Welcome</h1>
+        </div>
+        
     );
 }
 

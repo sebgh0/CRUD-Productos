@@ -7,6 +7,7 @@ import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
+import '../index.css'
 
 interface Product {
     product_id: number;
@@ -103,12 +104,12 @@ export const Products: React.FC = () => {
     };
 
     return(
-        <div>
+        <div className="container">
             <Toast ref={toast} />
             <h1>Gestión de Productos</h1>
 
             <Button label="Agregar" icon="pi pi-plus" onClick={openNew} />
-            <DataTable value={products} tableStyle={{ minWidth: '50rem' }}>
+            <DataTable value={products} tableStyle={{ minWidth: '50rem'}} className="table">
                 <Column field="product_id" header="ID"></Column>
                 <Column field="name" header="Nombre"></Column>
                 <Column field="price" header="Precio"></Column>
