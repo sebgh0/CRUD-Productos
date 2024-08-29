@@ -16,4 +16,20 @@ Esta aplicación permite realizar las siguientes operaciones:
 
 
 ## Capturas
+
+### Categorias
 ![alt text](images/categories.png)
+
+### Productos
+![alt text](images/products.png)
+
+## Instalación
+
+
+```bash
+git clone https://github.com/sebgh0/CRUD-Productos.git
+```
+
+```bash
+
+```

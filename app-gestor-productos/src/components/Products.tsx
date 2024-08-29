@@ -7,6 +7,7 @@ import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
+import { InputNumber } from 'primereact/inputnumber';
 import '../index.css'
 
 interface Product {
@@ -155,20 +156,26 @@ export const Products: React.FC = () => {
 
                 <div className="p-field">
                     <label htmlFor="price">Precio</label>
-                    <InputText
+                    <InputNumber
                         id="price"
                         placeholder="Precio"
-                        value={product?.price?.toString() || ''}
-                        onChange={(e) => setProduct({ ...product!, price: parseFloat(e.target.value) })}
+                        value={product?.price}
+                        onValueChange={(e) => setProduct({ ...product!, price: e.value ?? 0 })}
+                        mode="decimal"
+                        minFractionDigits={2}
+                        maxFractionDigits={2}
                     />
                 </div>
                 <div className="p-field">
                     <label htmlFor="stock_quantity">Cantidad en Stock</label>
-                    <InputText
+                    <InputNumber
                         id="stock_quantity"
                         placeholder="Cantidad en Stock"
-                        value={product?.stock_quantity?.toString() || ''}
-                        onChange={(e) => setProduct({ ...product!, stock_quantity: parseInt(e.target.value) })}
+                        value={product?.stock_quantity}
+                        onValueChange={(e) => setProduct({ ...product!, stock_quantity: e.value ?? 0 })}
+                        mode="decimal"
+                        minFractionDigits={0}
+                        maxFractionDigits={0}
                     />
                 </div>
                 <div className="p-field">
