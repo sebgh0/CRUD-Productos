@@ -53,10 +53,9 @@ npm start
 
 * La API estará disponible en:
   
-`http://localhost:3001/api/v1/categories`
+  `http://localhost:3001/api/v1/categories`
 
-`http://localhost:3001/api/v1/products`
-
+  `http://localhost:3001/api/v1/products`
 
 
 `Nota:` La API se conecta a MySQL. Modifica las credenciales en el archivo .env para configurar la conexión a la base de datos.
